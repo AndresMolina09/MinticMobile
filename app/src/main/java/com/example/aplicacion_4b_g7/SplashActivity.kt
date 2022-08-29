@@ -1,6 +1,7 @@
 package com.example.aplicacion_4b_g7
 
 import android.animation.Animator
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.Animation
@@ -31,7 +32,9 @@ class SplashActivity : AppCompatActivity() {
             }
 
             override fun onAnimationEnd(animation: Animator?) {
-                Log.d("Hola", "Animacion finalizada")
+                val intent = Intent(applicationContext, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
             }
 
             override fun onAnimationCancel(animation: Animator?) {
