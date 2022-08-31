@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email_hint">Correo Electronico</string>
     <string name="password_hint">Contraseña</string>
+    <string name="forgot_label">¿Olvidaste la contraseña?</string>
 </resources>

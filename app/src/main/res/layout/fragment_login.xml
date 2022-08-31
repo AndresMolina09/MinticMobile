@@ -16,7 +16,16 @@
         android:layout_height="wrap_content"
         app:cardElevation="@dimen/card_elevation">
 
+        <TextView
+            android:id="@+id/text_bienvenida"
+            android:text="PRUEBA"
+            android:textSize="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toTopOf="@id/text_bienvenida"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/default_margin">
@@ -61,13 +70,15 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/login_password_layout"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginVertical="@dimen/default_margin"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:text="Olvidaste la contraseña">
+                android:fontFamily="@font/lato"
+                android:text="@string/forgot_label"
+                android:textAppearance="@style/Butoon.Mintic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_password_layout">
 
             </com.google.android.material.button.MaterialButton>
 
