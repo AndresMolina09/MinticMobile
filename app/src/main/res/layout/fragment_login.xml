@@ -18,19 +18,24 @@
 
         <TextView
             android:id="@+id/text_bienvenida"
-            android:text="PRUEBA"
+            android:text="BIENVENIDO"
             android:textSize="24dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
             />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            app:layout_constraintTop_toTopOf="@id/text_bienvenida"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/default_margin">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="60dp"
                 android:id="@+id/login_email_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -41,10 +46,10 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/login_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textEmailAddress"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+                    android:inputType="textEmailAddress" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,6 +74,22 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <RelativeLayout
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                tools:context="com.herprogramacion.botones.ActividadBotones"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="INGRESAR" />
+            </RelativeLayout>
+
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
@@ -78,7 +99,7 @@
                 android:text="@string/forgot_label"
                 android:textAppearance="@style/Butoon.Mintic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/login_password_layout">
+                app:layout_constraintTop_toBottomOf="@id/button">
 
             </com.google.android.material.button.MaterialButton>
 
