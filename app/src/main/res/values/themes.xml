@@ -12,11 +12,38 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeApparance.Mintic.SmallComponents</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeApparance.Mintic.MediumComponents</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeApparance.Mintic.LargeComponents</item>
+
+
     </style>
 
     <style name="Theme.Aplicacion4BG7.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="ShapeApparance.Mintic.SmallComponents" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_size</item>
+    </style>
+
+    <style name="ShapeApparance.Mintic.MediumComponents" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_size_md</item>
+    </style>
+
+    <style name="ShapeApparance.Mintic.LargeComponents" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_size_lg</item>
+    </style>
+
+    <style name="Butoon.Mintic" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="Theme.Aplicacion4BG7.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
