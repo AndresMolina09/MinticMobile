@@ -7,6 +7,8 @@
     tools:context=".LoginFragment">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_login_card"
+        app:layout_constraintVertical_chainStyle="spread"
         android:layout_width="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,22 +77,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <RelativeLayout
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                tools:context="com.herprogramacion.botones.ActividadBotones"
-                tools:ignore="MissingConstraints">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="200dp"
-                    android:layout_centerHorizontal="true"
-                    android:text="INGRESAR" />
-            </RelativeLayout>
-
-
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
@@ -98,14 +84,55 @@
                 android:layout_marginVertical="@dimen/default_margin"
                 android:fontFamily="@font/lato"
                 android:text="@string/forgot_label"
-                android:textAppearance="@style/Butoon.Mintic"
+                android:textAppearance="@style/Button.Mintic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button">
-
+                app:layout_constraintTop_toBottomOf="@id/login_password_layout">
             </com.google.android.material.button.MaterialButton>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragment_login_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/fragment_login_card"
+        app:layout_constraintBottom_toTopOf="@id/fragment_login_label_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/button_login_label"
+        app:backgroundTint="@color/primaryLight"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fragment_login_label_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_login_label_2"
+        android:layout_marginVertical="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/fragment_login_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/login_label_1"
+        android:textAppearance="@style/Text.Mintic"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fragment_login_label_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/fragment_login_label_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fragment_login_label_1"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_login_label_1"
+        android:layout_marginVertical="@dimen/default_margin"
+        android:text="@string/login_signup_label"
+        android:textAppearance="@style/TextBlue.Mintic"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

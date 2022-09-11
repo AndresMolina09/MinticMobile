@@ -5,4 +5,7 @@
     <string name="email_hint">Correo Electronico</string>
     <string name="password_hint">Contraseña</string>
     <string name="forgot_label">¿Olvidaste la contraseña?</string>
+    <string name="button_login_label">Ingresar</string>
+    <string name="login_label_1">No tengo cuenta</string>
+    <string name="login_signup_label">Registrate Ahora</string>
 </resources>
