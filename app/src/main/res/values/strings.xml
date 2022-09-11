@@ -7,5 +7,16 @@
     <string name="forgot_label">¿Olvidaste la contraseña?</string>
     <string name="button_login_label">Ingresar</string>
     <string name="login_label_1">No tengo cuenta</string>
-    <string name="login_signup_label">Registrate Ahora</string>
+    <string name="login_signup_label">¡Registrate Ahora!</string>
+    <string name="email_error">Correo electronico no valido. Intente nuevamente</string>
+    <string name="password_error">Contraseña incorrecta. Intente nuevamente</string>
+    <string name="button_signup_label">Crear Cuenta</string>
+    <string name="signup_label_1">Tengo cuenta</string>
+    <string name="signup_label_2">¡Iniciar Sesion!</string>
+    <string name="name_hint">Nombre</string>
+    <string name="female_label">Femenino</string>
+    <string name="male_label">Masculino</string>
+    <string name="another_label">Otro</string>
+    <string name="button_forgot_label">Cambiar contraseña</string>
+    <string name="email_forgot_label">Ingrese su correo electronico</string>
 </resources>

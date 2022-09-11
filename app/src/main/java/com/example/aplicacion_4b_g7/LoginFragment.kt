@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.aplicacion_4b_g7.databinding.ActivityLoginBinding
 import com.example.aplicacion_4b_g7.databinding.FragmentLoginBinding
 
@@ -20,6 +21,32 @@ class LoginFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override  fun onStart(){
+        super.onStart()
+
+        binding.fragmentLoginButton.setOnClickListener{
+            if(!binding.loginEmail.text.toString().isValidEmail()){
+                binding.loginEmailLayout.error = getString(R.string.email_error)
+            }else{
+                binding.loginEmailLayout.error = null
+            }
+
+            if(!binding.loginPassword.text.toString().isValidPassword()){
+                binding.loginPasswordLayout.error = getString(R.string.password_error)
+            } else {
+                binding.loginPasswordLayout.error = null
+            }
+        }
+
+        binding.fragmentLoginLabel2.setOnClickListener{
+            findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+        }
+
+        binding.loginForgotButton.setOnClickListener{
+            findNavController().navigate(R.id.action_loginFragment_to_forgotFragment)
+        }
     }
 
 }
