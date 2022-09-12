@@ -15,6 +15,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.homeToolbar)
     }
 
     override fun onStart() {

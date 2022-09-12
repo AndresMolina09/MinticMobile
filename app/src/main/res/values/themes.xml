@@ -64,6 +64,25 @@
         <item name="android:textColor">@color/primaryLight</item>
     </style>
 
+    <style name="TextBlue2.Mintic" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/subtitle_size</item>
+        <item name="android:textColor">@color/primaryVariant</item>
+    </style>
+
+    <style name="Title.Mintic" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/lato_bold</item>
+        <item name="android:textColor">@color/primaryVariant</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="TextSecondary.Mintic" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/subtitle_size</item>
+        <item name="android:textColor">@color/secondaryText</item>
+    </style>
+
     <style name="Theme.Aplicacion4BG7.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Aplicacion4BG7.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

@@ -23,4 +23,7 @@
     <string name="location_label">Localizaciones</string>
     <string name="specialist_label">Especialistas</string>
     <string name="profile_label">Mi perfil</string>
+    <string name="home_fragment_label">Tu salud en nuestras manos</string>
+    <string name="fragment_home_subtitle">Agenda tu cita para que nuestros especialistas puedan atenderte</string>
+    <string name="fragment_home_services">Nuestros servicios</string>
 </resources>
