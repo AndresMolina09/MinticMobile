@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.aplicacion_4b_g7.databinding.FragmentForgotBinding
-import com.example.aplicacion_4b_g7.databinding.FragmentLoginBinding
 
 class ForgotFragment : Fragment() {
 

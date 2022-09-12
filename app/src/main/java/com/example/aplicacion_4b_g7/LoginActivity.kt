@@ -2,6 +2,8 @@ package com.example.aplicacion_4b_g7
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import com.example.aplicacion_4b_g7.databinding.ActivityLoginBinding
 import com.example.aplicacion_4b_g7.databinding.ActivitySplashBinding
 
@@ -14,4 +16,5 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
+
 }

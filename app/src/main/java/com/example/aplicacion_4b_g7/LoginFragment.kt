@@ -1,5 +1,6 @@
 package com.example.aplicacion_4b_g7
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -37,6 +38,12 @@ class LoginFragment : Fragment() {
                 binding.loginPasswordLayout.error = getString(R.string.password_error)
             } else {
                 binding.loginPasswordLayout.error = null
+            }
+
+            if(binding.loginEmail.text.toString().isValidEmail() && binding.loginPassword.text.toString().isValidPassword()){
+                val intent = Intent(requireContext(),HomeActivity::class.java)
+                startActivity(intent)
+                requireActivity().finish()
             }
         }
 

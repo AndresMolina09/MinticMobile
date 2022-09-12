@@ -19,4 +19,8 @@
     <string name="another_label">Otro</string>
     <string name="button_forgot_label">Cambiar contraseña</string>
     <string name="email_forgot_label">Ingrese su correo electronico</string>
+    <string name="home_label">MYMEDIC</string>
+    <string name="location_label">Localizaciones</string>
+    <string name="specialist_label">Especialistas</string>
+    <string name="profile_label">Mi perfil</string>
 </resources>
