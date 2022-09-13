@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/item_service_icon"
         app:layout_constraintStart_toEndOf="@id/item_service_icon"
-        android:text="Generalidad"
+        tools:text="General"
         android:layout_marginStart="@dimen/default_margin"
         style="@style/TextBlue.Mintic"
         android:textSize="@dimen/subtitle_title_size"/>
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@id/item_service_title"
         app:layout_constraintStart_toEndOf="@id/item_service_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Los mejores especialistas en medicina interna"
+        tools:text="Los mejores especialistas en medicina interna"
         android:layout_marginHorizontal="@dimen/default_margin"
         android:textSize="@dimen/default_margin"/>
     

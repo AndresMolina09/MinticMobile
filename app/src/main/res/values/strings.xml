@@ -26,4 +26,5 @@
     <string name="home_fragment_label">Tu salud en nuestras manos</string>
     <string name="fragment_home_subtitle">Agenda tu cita para que nuestros especialistas puedan atenderte</string>
     <string name="fragment_home_services">Nuestros servicios</string>
+    <string name="search_label">Buscar</string>
 </resources>

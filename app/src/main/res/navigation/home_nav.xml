@@ -10,7 +10,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.aplicacion_4b_g7.HomeFragment"
         android:label="@string/home_label"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_specialistFragment2"
+            app:destination="@id/specialistFragment" />
+    </fragment>
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.example.aplicacion_4b_g7.LocationFragment"
@@ -25,5 +29,20 @@
         android:id="@+id/specialistFragment"
         android:name="com.example.aplicacion_4b_g7.SpecialistFragment"
         android:label="@string/specialist_label"
-        tools:layout="@layout/fragment_specialist" />
+        tools:layout="@layout/fragment_specialist" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="description"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="search"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
 </navigation>

@@ -82,6 +82,12 @@
         <item name="android:textSize">@dimen/subtitle_size</item>
         <item name="android:textColor">@color/secondaryText</item>
     </style>
+    
+    <style name="Caption.Mintic" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/caption_text_size</item>
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/secondaryVariant</item>
+    </style>
 
     <style name="Theme.Aplicacion4BG7.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_doctor_icon"
+        android:layout_width="@dimen/service_icon_size"
+        android:layout_height="@dimen/service_icon_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        tools:srcCompat="@drawable/ic_baseline_home_24"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_doctor_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/item_doctor_icon"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_icon"
+        tools:text="General"
+        android:layout_marginStart="@dimen/default_margin"
+        style="@style/TextBlue.Mintic"
+        android:textSize="@dimen/subtitle_title_size"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_doctor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_doctor_title"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_icon"
+        tools:text="Dr. Julio Mellizo"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="@dimen/default_margin" />
+
+    <RatingBar
+        android:layout_marginTop="@dimen/small_margin"
+        android:id="@+id/item_doctor_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_doctor_name"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_icon"
+        android:numStars="1"
+        android:rating="1"
+        style="?attr/ratingBarStyleSmall"
+        android:layout_marginStart="16dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_doctor_icon"
+        android:background="@color/primaryLight"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_doctor_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/item_doctor_rating"
+        app:layout_constraintBottom_toBottomOf="@id/item_doctor_rating"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_rating"
+        tools:text="5 Estrellas - 500 pacientes"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:textAppearance="@style/Caption.Mintic"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

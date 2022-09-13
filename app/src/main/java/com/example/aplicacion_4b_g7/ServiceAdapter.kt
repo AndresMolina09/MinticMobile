@@ -18,8 +18,6 @@ class ServiceAdapter(var list: List<ServiceModel>): RecyclerView.Adapter<Service
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
-        println("aqui")
-        println(holder.view.itemServiceIcon.setImageResource(item.icon.toInt()))
         holder.view.itemServiceTitle.text = item.title
         holder.view.itemServiceDescripcion.text = item.description
         holder.view.itemServiceIcon.setImageResource(item.icon.toInt())
