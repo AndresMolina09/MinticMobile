@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aplicacion_4b_g7.databinding.FragmentHomeBinding
 
@@ -57,7 +58,11 @@ class HomeFragment : Fragment() {
 
         serviceAdapter.listener = object : OnServiceClickListener{
             override fun onClick(item: ServiceModel) {
-                Log.d("Probando",item.title)
+                val action = HomeFragmentDirections.actionHomeFragmentToSpecialistFragment2()
+                action.search = false
+                action.name = item.title
+                action.description = item.description
+                findNavController().navigate(action)
             }
 
         }

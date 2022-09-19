@@ -27,4 +27,6 @@
     <string name="fragment_home_subtitle">Agenda tu cita para que nuestros especialistas puedan atenderte</string>
     <string name="fragment_home_services">Nuestros servicios</string>
     <string name="search_label">Buscar</string>
+    <string name="specialist_fragment_title">Nuestros especialistas</string>
+    <string name="specialist_fragment_subtitle">Agenda una cita con la especialidad de tu preferencia</string>
 </resources>

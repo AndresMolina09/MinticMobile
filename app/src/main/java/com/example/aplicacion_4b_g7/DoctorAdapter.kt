@@ -31,4 +31,9 @@ class DoctorAdapter(var list: List<DoctorModel>): RecyclerView.Adapter<DoctorAda
     override fun getItemCount(): Int {
         return list.size
     }
+
+    fun changeDataSet(newList: List<DoctorModel>){
+        this.list = newList
+        notifyDataSetChanged()
+    }
 }
