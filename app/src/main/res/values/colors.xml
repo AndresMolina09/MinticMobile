@@ -6,6 +6,7 @@
     <color name="secondary">#747F9E</color>
     <color name="secondaryVariant">#A4B0BE</color>
     <color name="error">#FEAD7F</color>
+    <color name="colorOnError">#FF0000</color>
     <color name="secondaryText">#31334C</color>
     <color name="primaryText">#EEEEEE</color>
     <color name="black">#FF000000</color>

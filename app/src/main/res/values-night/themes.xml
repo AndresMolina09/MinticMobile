@@ -11,7 +11,7 @@
         <item name="colorOnSecondary">@color/secondaryText</item>
 
         <item name="colorError">@color/error</item>
-        <item name="colorOnError">@color/error</item>
+        <item name="colorOnError">@color/colorOnError</item>
 
         <item name="backgroundColor">@color/white</item>
         <item name="colorOnBackground">@color/black</item>
