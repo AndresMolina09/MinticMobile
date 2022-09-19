@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="@dimen/big_margin"
         app:shapeAppearanceOverlay="@style/cutImage"
-        app:srcCompat="@drawable/ico_dermatologia"
+        app:srcCompat="@drawable/segundo_doctor"
         android:scaleType="centerCrop"
         app:strokeWidth="@dimen/stroke"
         app:strokeColor="@color/black"
@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/default_margin"
         android:textColor="@color/white"
-        tools:text="Julio Mellizo"/>
+        tools:text="NICOLAS SANTANDER"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/profile_fragment_email"
@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/default_margin"
         android:textColor="@color/white"
-        tools:text="juliomellizo24@gmail.com"/>
+        tools:text="josenicolas@gmail.com"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/profile_fragment_gender"
@@ -53,7 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/default_margin"
         android:textColor="@color/white"
-        tools:text="Masculino"/>
+        tools:text="MASCULINO"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/profile_fragment_logout"
