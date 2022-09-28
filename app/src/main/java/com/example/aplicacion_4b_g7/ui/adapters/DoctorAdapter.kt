@@ -1,8 +1,10 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.aplicacion_4b_g7.data.models.DoctorModel
+import com.example.aplicacion_4b_g7.interfaces.OnDoctorClickListener
 import com.example.aplicacion_4b_g7.databinding.ItemDoctorBinding
 
 class DoctorAdapter(var list: List<DoctorModel>): RecyclerView.Adapter<DoctorAdapter.ViewHolder>() {

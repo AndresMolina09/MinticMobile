@@ -29,4 +29,5 @@
     <string name="search_label">Buscar</string>
     <string name="specialist_fragment_title">Nuestros especialistas</string>
     <string name="specialist_fragment_subtitle">Agenda una cita con la especialidad de tu preferencia</string>
+    <string name="login_error">Credenciales invalidas</string>
 </resources>

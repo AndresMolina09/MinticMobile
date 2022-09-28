@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.aplicacion_4b_g7.LoginFragment"
+        android:name="com.example.aplicacion_4b_g7.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.aplicacion_4b_g7.SignUpFragment"
+        android:name="com.example.aplicacion_4b_g7.ui.fragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotFragment"
-        android:name="com.example.aplicacion_4b_g7.ForgotFragment"
+        android:name="com.example.aplicacion_4b_g7.ui.fragments.ForgotFragment"
         android:label="fragment_forgot"
         tools:layout="@layout/fragment_forgot" >
         <action

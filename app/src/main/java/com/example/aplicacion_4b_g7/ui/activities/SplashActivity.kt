@@ -1,16 +1,9 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.ui.activities
 
 import android.animation.Animator
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.animation.Animation
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.aplicacion_4b_g7.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {

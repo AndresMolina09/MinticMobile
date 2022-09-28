@@ -1,4 +1,4 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.data.models
 
 data class ServiceModel (
     val id: String,

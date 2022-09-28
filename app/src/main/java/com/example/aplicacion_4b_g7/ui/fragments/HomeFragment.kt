@@ -1,13 +1,16 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.aplicacion_4b_g7.interfaces.OnServiceClickListener
+import com.example.aplicacion_4b_g7.R
+import com.example.aplicacion_4b_g7.ui.adapters.ServiceAdapter
+import com.example.aplicacion_4b_g7.data.models.ServiceModel
 import com.example.aplicacion_4b_g7.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -34,7 +37,7 @@ class HomeFragment : Fragment() {
 
                 ),
                 ServiceModel(
-                    "2",R.drawable.ico_especialidad.toString(),
+                    "2", R.drawable.ico_especialidad.toString(),
                     "Especialista","Los mejores medicos especialistas",
 
                 ),
@@ -56,9 +59,10 @@ class HomeFragment : Fragment() {
             )
         )
 
-        serviceAdapter.listener = object : OnServiceClickListener{
+        serviceAdapter.listener = object : OnServiceClickListener {
             override fun onClick(item: ServiceModel) {
-                val action = HomeFragmentDirections.actionHomeFragmentToSpecialistFragment2()
+                val action =
+                    HomeFragmentDirections.actionHomeFragmentToSpecialistFragment2()
                 action.search = false
                 action.name = item.title
                 action.description = item.description

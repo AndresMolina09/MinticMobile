@@ -1,8 +1,10 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.aplicacion_4b_g7.interfaces.OnServiceClickListener
+import com.example.aplicacion_4b_g7.data.models.ServiceModel
 import com.example.aplicacion_4b_g7.databinding.ItemServiceBinding
 
 class ServiceAdapter(var list: List<ServiceModel>): RecyclerView.Adapter<ServiceAdapter.ViewHolder>() {

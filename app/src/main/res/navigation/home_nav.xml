@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.aplicacion_4b_g7.HomeFragment"
+        android:name="com.example.aplicacion_4b_g7.ui.fragments.HomeFragment"
         android:label="@string/home_label"
         tools:layout="@layout/fragment_home" >
         <action
@@ -17,17 +17,17 @@
     </fragment>
     <fragment
         android:id="@+id/locationFragment"
-        android:name="com.example.aplicacion_4b_g7.LocationFragment"
+        android:name="com.example.aplicacion_4b_g7.ui.fragments.LocationFragment"
         android:label="@string/location_label"
         tools:layout="@layout/fragment_location" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.aplicacion_4b_g7.ProfileFragment"
+        android:name="com.example.aplicacion_4b_g7.ui.fragments.ProfileFragment"
         android:label="@string/profile_label"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/specialistFragment"
-        android:name="com.example.aplicacion_4b_g7.SpecialistFragment"
+        android:name="com.example.aplicacion_4b_g7.ui.fragments.SpecialistFragment"
         android:label="@string/specialist_label"
         tools:layout="@layout/fragment_specialist" >
         <argument

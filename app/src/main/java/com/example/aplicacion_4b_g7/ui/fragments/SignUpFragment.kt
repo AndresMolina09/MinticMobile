@@ -1,4 +1,4 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.aplicacion_4b_g7.databinding.FragmentLoginBinding
+import com.example.aplicacion_4b_g7.R
 import com.example.aplicacion_4b_g7.databinding.FragmentSignUpBinding
 
 

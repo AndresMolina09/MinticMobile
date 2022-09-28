@@ -1,4 +1,4 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,10 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.aplicacion_4b_g7.ui.adapters.DoctorAdapter
+import com.example.aplicacion_4b_g7.data.models.DoctorModel
+import com.example.aplicacion_4b_g7.interfaces.OnDoctorClickListener
+import com.example.aplicacion_4b_g7.R
 import com.example.aplicacion_4b_g7.databinding.FragmentSpecialistBinding
 
 class SpecialistFragment : Fragment() {

@@ -1,10 +1,11 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.example.aplicacion_4b_g7.R
 import com.example.aplicacion_4b_g7.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {

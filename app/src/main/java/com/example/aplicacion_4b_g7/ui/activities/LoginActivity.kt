@@ -1,4 +1,4 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

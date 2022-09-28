@@ -1,4 +1,4 @@
-package com.example.aplicacion_4b_g7
+package com.example.aplicacion_4b_g7.ui.fragments
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -10,9 +10,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.aplicacion_4b_g7.CAMERA_PERMISSION
+import com.example.aplicacion_4b_g7.ui.activities.LoginActivity
+import com.example.aplicacion_4b_g7.TAKE_PICTURE
+import com.example.aplicacion_4b_g7.checkPermission
 import com.example.aplicacion_4b_g7.databinding.FragmentProfileBinding
 import com.google.android.material.snackbar.Snackbar
-import java.util.jar.Manifest
 
 class ProfileFragment : Fragment() {
 
