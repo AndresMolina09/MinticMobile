@@ -5,19 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aplicacion_4b_g7.interfaces.OnServiceClickListener
 import com.example.aplicacion_4b_g7.R
 import com.example.aplicacion_4b_g7.ui.adapters.ServiceAdapter
 import com.example.aplicacion_4b_g7.data.models.ServiceModel
+import com.example.aplicacion_4b_g7.data.viewmodels.HomeViewModel
 import com.example.aplicacion_4b_g7.databinding.FragmentHomeBinding
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding: FragmentHomeBinding get() = _binding!!
     private lateinit var serviceAdapter: ServiceAdapter
+    private val homeViewModel: HomeViewModel by sharedViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,34 +33,9 @@ class HomeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        homeViewModel.getServices()
         serviceAdapter = ServiceAdapter(
-            listOf(
-                ServiceModel(
-                    "1", R.drawable.ico_general.toString(),
-                    "General","Los mejores medicos generales"
-
-                ),
-                ServiceModel(
-                    "2", R.drawable.ico_especialidad.toString(),
-                    "Especialista","Los mejores medicos especialistas",
-
-                ),
-                ServiceModel(
-                    "3", R.drawable.ico_odontologia.toString(),
-                    "Odontologia", "Los mejores especialistas en odontologia",
-
-                ),
-                ServiceModel(
-                    "4", R.drawable.ico_dermatologia.toString(),
-                    "Dermatologia", "Los mejores especialistas en dermatologia",
-
-                ),
-                ServiceModel(
-                    "5", R.drawable.ico_pediatria.toString(),
-                    "Pediatria", "Los mejores especialistas en pediatria",
-
-                )
-            )
+            mutableListOf()
         )
 
         serviceAdapter.listener = object : OnServiceClickListener {
@@ -74,6 +53,13 @@ class HomeFragment : Fragment() {
             adapter = serviceAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
+        observeViewModels()
+    }
+
+    private fun observeViewModels(){
+        homeViewModel.services.observe(viewLifecycleOwner, Observer {
+            serviceAdapter.changeDataSet(it)
+        })
     }
 
 }

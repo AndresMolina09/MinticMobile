@@ -7,7 +7,7 @@ import com.example.aplicacion_4b_g7.data.models.DoctorModel
 import com.example.aplicacion_4b_g7.interfaces.OnDoctorClickListener
 import com.example.aplicacion_4b_g7.databinding.ItemDoctorBinding
 
-class DoctorAdapter(var list: List<DoctorModel>): RecyclerView.Adapter<DoctorAdapter.ViewHolder>() {
+class DoctorAdapter(var list: MutableList<DoctorModel>): RecyclerView.Adapter<DoctorAdapter.ViewHolder>() {
 
     var listener: OnDoctorClickListener? = null
 
@@ -35,7 +35,13 @@ class DoctorAdapter(var list: List<DoctorModel>): RecyclerView.Adapter<DoctorAda
     }
 
     fun changeDataSet(newList: List<DoctorModel>){
-        this.list = newList
-        notifyDataSetChanged()
+        while (list.size > 0){
+            list.removeAt(0)
+            notifyItemRemoved(0)
+        }
+        newList.forEach{
+            this.list.add(it)
+            notifyItemInserted(this.list.size - 1)
+        }
     }
 }

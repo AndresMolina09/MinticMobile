@@ -87,7 +87,7 @@ class SpecialistFragment : Fragment() {
             binding.specialistFragmentSubtitle.text = args.description
         }
 
-        doctorAdapter = DoctorAdapter(doctorList)
+        doctorAdapter = DoctorAdapter(doctorList as MutableList<DoctorModel>)
         doctorAdapter.listener = object : OnDoctorClickListener {
             override fun onClick(item: DoctorModel) {
                 Log.d("Hola", item.name)
