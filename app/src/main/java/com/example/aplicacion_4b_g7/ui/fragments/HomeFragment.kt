@@ -13,6 +13,7 @@ import com.example.aplicacion_4b_g7.R
 import com.example.aplicacion_4b_g7.ui.adapters.ServiceAdapter
 import com.example.aplicacion_4b_g7.data.models.ServiceModel
 import com.example.aplicacion_4b_g7.data.viewmodels.HomeViewModel
+import com.example.aplicacion_4b_g7.data.viewmodels.LoginViewModel
 import com.example.aplicacion_4b_g7.databinding.FragmentHomeBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -22,6 +23,7 @@ class HomeFragment : Fragment() {
     private val binding: FragmentHomeBinding get() = _binding!!
     private lateinit var serviceAdapter: ServiceAdapter
     private val homeViewModel: HomeViewModel by sharedViewModel()
+    private val loginViewModel: LoginViewModel by sharedViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +35,7 @@ class HomeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        loginViewModel.currentUser()
         homeViewModel.getServices()
         serviceAdapter = ServiceAdapter(
             mutableListOf()
