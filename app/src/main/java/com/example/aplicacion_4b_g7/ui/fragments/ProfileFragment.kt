@@ -67,34 +67,36 @@ class ProfileFragment : Fragment() {
             if(data != null && data.extras != null) {
                 val extras = data.extras!!
                 val image = extras["data"] as Bitmap?
-                binding.profileFragmentImage.setImageBitmap(image)
+                if(image != null){
+                    loginViewModel.uploadImage(image)
+                }
             }
         }
     }
 
     private fun observeViewModels(){
-        loginViewModel.logOut.observe(viewLifecycleOwner, Observer {
-            if(it){
-                val intent = Intent(requireContext(), LoginActivity::class.java)
+        loginViewModel.user.observe(viewLifecycleOwner, Observer {
+            if(it != null){
+                binding.profileFragmentName.text = it.name
+                binding.profileFragmentEmail.text = it.email
+                binding.profileFragmentGender.text = it.gender
+                if(it.image != null){
+                    Glide.with(binding.root).load(it.image).centerCrop().into(binding.profileFragmentImage)
+                }
+            }else{
+                val intent = Intent(requireContext(),LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
                 requireActivity().finish()
             }
-        })
-        loginViewModel.user.observe(viewLifecycleOwner, Observer {
-            binding.profileFragmentName.text = it.name
-            binding.profileFragmentEmail.text = it.email
-            binding.profileFragmentGender.text = it.gender
-            if(it.image != null){
-                Glide.with(binding.root).load(it.image).centerCrop().into(binding.profileFragmentImage)
-            }
+
         })
     }
 
     private fun openCamera(){
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         try{
-            startActivityForResult(intent, TAKE_PICTURE, )
+            startActivityForResult(intent, TAKE_PICTURE )
         }catch(e: ActivityNotFoundException){
 
         }

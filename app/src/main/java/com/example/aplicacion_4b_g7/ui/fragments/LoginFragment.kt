@@ -50,9 +50,7 @@ class LoginFragment : Fragment() {
 
             if(binding.loginEmail.text.toString().isValidEmail() && binding.loginPassword.text.toString().isValidPassword()){
                 loginViewModel.login(binding.loginEmail.text.toString(), binding.loginPassword.text.toString())
-                //val intent = Intent(requireContext(), HomeActivity::class.java)
-                //startActivity(intent)
-                //requireActivity().finish()
+
             }
         }
 
@@ -64,10 +62,10 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.action_loginFragment_to_forgotFragment)
         }
 
-        observeViewModel()
+        observeViewModels()
     }
 
-    private fun observeViewModel(){
+    private fun observeViewModels(){
         loginViewModel.login.observe(this, Observer {
             if(it){
                 val intent = Intent(requireContext(), HomeActivity::class.java)

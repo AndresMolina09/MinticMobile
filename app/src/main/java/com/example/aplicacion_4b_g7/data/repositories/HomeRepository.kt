@@ -20,7 +20,6 @@ class HomeRepository(private val memoryDataSource: MemoryDataSource,
     }
 
     suspend fun getSpecialist(category: String?): List<DoctorModel>{
-        //return memoryDataSource.getSpecialist(category)
         if(category == null) return doctorDao.getAll()
         return doctorDao.getAllBySpeciality(category)
     }

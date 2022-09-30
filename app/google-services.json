@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "549957349876",
+    "project_id": "minticapp-9ecf2",
+    "storage_bucket": "minticapp-9ecf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549957349876:android:e6b6f3aae77be2fd3fc9a1",
+        "android_client_info": {
+          "package_name": "com.example.aplicacion_4b_g7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549957349876-d9qv6lseem54loth0g5o8j39h7k64vb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIEgqB-4louPozpkbt8eLhYolCMYVdpSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549957349876-d9qv6lseem54loth0g5o8j39h7k64vb8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

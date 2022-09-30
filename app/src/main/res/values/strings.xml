@@ -33,4 +33,5 @@
     <string name="details">Detalles del medico</string>
     <string name="about_us">Acerca de:</string>
     <string name="about_us_doctor">Excelente medico general graduado de la Universidad del Cauca, con 8 años de experiencia laboral. Actualmente especializandose en neurocirugia en la Universidad del Valle.</string>
+    <string name="signup_error">Registro invalido</string>
 </resources>
