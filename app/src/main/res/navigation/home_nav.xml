@@ -44,5 +44,13 @@
             android:name="search"
             app:argType="boolean"
             android:defaultValue="true" />
+        <action
+            android:id="@+id/action_specialistFragment_to_specialistDetailFragment"
+            app:destination="@id/specialistDetailFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/specialistDetailFragment"
+        android:name="com.example.aplicacion_4b_g7.ui.fragments.SpecialistDetailFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_specialist_detail" />
 </navigation>

@@ -23,8 +23,8 @@ class DoctorAdapter(var list: MutableList<DoctorModel>): RecyclerView.Adapter<Do
         holder.view.itemDoctorTitle.text = item.speciality
         holder.view.itemDoctorName.text = item.name
         holder.view.itemDoctorSummary.text = item.caption
-        holder.view.itemDoctorRating.rating = (item.start/5.0).toFloat()
-        holder.view.itemDoctorIcon.setImageResource(item.imagen.toInt())
+        holder.view.itemDoctorRating.rating = (item.star/5.0).toFloat()
+        holder.view.itemDoctorIcon.setImageResource(item.image.toInt())
         holder.view.root.setOnClickListener{
             listener?.onClick(item)
         }

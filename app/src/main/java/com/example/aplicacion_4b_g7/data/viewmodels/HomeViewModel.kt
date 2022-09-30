@@ -21,6 +21,9 @@ class HomeViewModel(private val repo: HomeRepository): ViewModel() {
     private var _doctors: MutableLiveData<List<DoctorModel>> = MutableLiveData()
     val doctors: LiveData<List<DoctorModel>> get() = _doctors
 
+    private var _doctor: MutableLiveData<DoctorModel> = MutableLiveData()
+    val doctor: LiveData<DoctorModel> get() = _doctor
+
     fun getServices(){
         viewModelScope.launch {
             _services.postValue(repo.getServices())
@@ -37,5 +40,9 @@ class HomeViewModel(private val repo: HomeRepository): ViewModel() {
         viewModelScope.launch {
             _doctors.postValue(repo.getSpecialist(category))
         }
+    }
+
+    fun selectedDoctor(item: DoctorModel){
+        _doctor.postValue(item)
     }
 }

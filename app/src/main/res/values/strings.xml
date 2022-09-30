@@ -30,4 +30,7 @@
     <string name="specialist_fragment_title">Nuestros especialistas</string>
     <string name="specialist_fragment_subtitle">Agenda una cita con la especialidad de tu preferencia</string>
     <string name="login_error">Credenciales invalidas</string>
+    <string name="details">Detalles del medico</string>
+    <string name="about_us">Acerca de:</string>
+    <string name="about_us_doctor">Excelente medico general graduado de la Universidad del Cauca, con 8 años de experiencia laboral. Actualmente especializandose en neurocirugia en la Universidad del Valle.</string>
 </resources>

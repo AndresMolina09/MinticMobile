@@ -5,7 +5,7 @@ data class DoctorModel (
     val speciality: String,
     val name: String,
     val caption: String,
-    val imagen: String,
-    val start: Double,
+    val image: String,
+    val star: Double,
     val description: String
 )
