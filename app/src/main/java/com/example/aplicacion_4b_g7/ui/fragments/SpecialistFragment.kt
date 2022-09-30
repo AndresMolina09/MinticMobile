@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aplicacion_4b_g7.ui.adapters.DoctorAdapter
 import com.example.aplicacion_4b_g7.data.models.DoctorModel
@@ -63,6 +64,10 @@ class SpecialistFragment : Fragment() {
         binding.homeFragmentRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = doctorAdapter
+            itemAnimator = DefaultItemAnimator().apply {
+                addDuration = 1000
+                removeDuration = 1000
+            }
         }
 
         observeViewModels()

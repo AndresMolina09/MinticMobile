@@ -6,5 +6,5 @@ import org.koin.dsl.module
 
 val repoModule = module {
     single { LoginRepository(get()) }
-    single { HomeRepository(get()) }
+    single { HomeRepository(get(), get(), get()) }
 }
