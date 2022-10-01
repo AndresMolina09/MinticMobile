@@ -66,7 +66,7 @@ class LoginRepository(private val memoryDataSource: MemoryDataSource,
             val imageRef = ref.child("${user.uid}.jpg")
             val baos: ByteArrayOutputStream = ByteArrayOutputStream()
             image.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-            imageRef.putBytes(baos.toByteArray())
+            imageRef.putBytes(baos.toByteArray()).await()
             val url = imageRef.downloadUrl.await()
             val profileUpdate = userProfileChangeRequest {
                 photoUri = url
