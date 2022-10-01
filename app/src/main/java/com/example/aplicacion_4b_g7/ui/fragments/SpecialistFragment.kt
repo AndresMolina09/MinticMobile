@@ -69,12 +69,19 @@ class SpecialistFragment : Fragment() {
                 removeDuration = 1000
             }
         }
-
+        binding.homeFragmentSwipe.setOnRefreshListener {
+            if(args.search != null){
+                homeViewModel.getSpecialist(null)
+            }else{
+                homeViewModel.getSpecialist(args.name)
+            }
+        }
         observeViewModels()
     }
 
     private fun observeViewModels(){
         homeViewModel.doctors.observe(viewLifecycleOwner, Observer {
+            binding.homeFragmentSwipe.isRefreshing = false
             doctorAdapter.changeDataSet(it)
         })
         homeViewModel.services.observe(viewLifecycleOwner, Observer {
