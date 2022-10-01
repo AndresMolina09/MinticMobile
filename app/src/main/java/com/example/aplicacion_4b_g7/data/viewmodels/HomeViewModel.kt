@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.aplicacion_4b_g7.data.models.CompanyModel
+import com.example.aplicacion_4b_g7.data.models.DoctorDetailModel
 import com.example.aplicacion_4b_g7.data.models.DoctorModel
 import com.example.aplicacion_4b_g7.data.models.ServiceModel
 import com.example.aplicacion_4b_g7.data.repositories.HomeRepository
@@ -23,6 +24,9 @@ class HomeViewModel(private val repo: HomeRepository): ViewModel() {
 
     private var _doctor: MutableLiveData<DoctorModel> = MutableLiveData()
     val doctor: LiveData<DoctorModel> get() = _doctor
+
+    private var _details: MutableLiveData<DoctorDetailModel> = MutableLiveData()
+    val detail: LiveData<DoctorDetailModel> = _details
 
     fun getServices(){
         viewModelScope.launch {
@@ -44,5 +48,11 @@ class HomeViewModel(private val repo: HomeRepository): ViewModel() {
 
     fun selectedDoctor(item: DoctorModel){
         _doctor.postValue(item)
+    }
+
+    fun getDetail(id: String){
+        viewModelScope.launch {
+            _details.postValue(repo.getDetails(id))
+        }
     }
 }

@@ -3,6 +3,7 @@ package com.example.aplicacion_4b_g7.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.aplicacion_4b_g7.data.models.DoctorModel
 import com.example.aplicacion_4b_g7.interfaces.OnServiceClickListener
 import com.example.aplicacion_4b_g7.data.models.ServiceModel
@@ -23,7 +24,8 @@ class ServiceAdapter(var list: MutableList<ServiceModel>): RecyclerView.Adapter<
         val item = list[position]
         holder.view.itemServiceTitle.text = item.title
         holder.view.itemServiceDescripcion.text = item.description
-        holder.view.itemServiceIcon.setImageResource(item.icon.toInt())
+        //holder.view.itemServiceIcon.setImageResource(item.icon.toInt())
+        Glide.with(holder.view.root).load(item.icon).into(holder.view.itemServiceIcon)
         holder.view.root.setOnClickListener{
             listener?.onClick(item)
         }

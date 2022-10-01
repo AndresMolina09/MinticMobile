@@ -6,11 +6,11 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "doctors")
 data class DoctorModel (
     @PrimaryKey
-    val id: String,
-    val speciality: String,
-    val name: String,
-    val caption: String,
-    val image: String,
-    val star: Double,
-    val description: String
+    var id: String = "",
+    var speciality: String = "",
+    var name: String = "",
+    var caption: String = "",
+    var image: String = "",
+    var star: Double = 0.0,
+    var description: String = ""
 )

@@ -132,7 +132,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                     android:fontFamily="@font/lato_bold"
-                    tools:text="Pacientes"/>
+                    android:text="Pacientes"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -164,8 +164,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lato_bold"
                     android:textSize="18dp"
-                    tools:text="4.5*"
+                    tools:text="4.5"
                     android:textAppearance="@style/TextBlue.Mintic"/>
+
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/specialist_detail_fragment_card_qualification_text"
@@ -176,7 +177,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                     android:fontFamily="@font/lato_bold"
-                    tools:text="Calificacion"/>
+                    android:text="Calificacion"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -220,7 +221,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                     android:fontFamily="@font/lato_bold"
-                    tools:text="Experiencia"/>
+                    android:text="Experiencia"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
