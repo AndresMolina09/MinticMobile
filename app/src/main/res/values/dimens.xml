@@ -11,7 +11,7 @@
     <dimen name="button_text_size">12sp</dimen>
     <dimen name="subtitle_size">13sp</dimen>
     <dimen name="subtitle_title_size">16sp</dimen>
-    <dimen name="banner_size">165dp</dimen>
+    <dimen name="banner_size">155dp</dimen>
     <dimen name="service_icon_size">64dp</dimen>
     <dimen name="caption_text_size">11sp</dimen>
     <dimen name="stroke">2dp</dimen>
